@@ -80,7 +80,7 @@ optional arguments:
 
 ## Usage examples
 
-###### Get info of a single email(exists or not,social media where email was used,data breaches,pastes and more info if it is a company email)
+###### Get info of a single email(exists or not,social media where email was used,data breaches,pastes and links to where it was found)
 
 ```bash
 $ buster -e target@example.com
