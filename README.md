@@ -1,6 +1,12 @@
 ## Description
 
-Buster is a simple OSINT tool used to generate and verify emails,enter the information you have on a person and it will do the rest.
+Buster is a simple OSINT tool used to:
+* Get info of an email (exists or not,social media where email was used,data breaches,pastes and links to where it was found)
+* Generate possible emails and usernames of a person
+* Find the email of a social media account
+* Find emails from a username
+* Find the work email of a person
+
 
 -----
 
