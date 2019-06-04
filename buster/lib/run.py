@@ -27,7 +27,7 @@ def print_info(email_info):
 				for profile in email_info["profiles"]:
 					print("\t\t"+profile)
 			elif(i=="sources"):
-				print("\t[-]Google Search:")
+				print("\t[-]Sources:")
 				for source in email_info["sources"]:
 					print("\t\t"+source)
 			elif(i=="twitter"):
