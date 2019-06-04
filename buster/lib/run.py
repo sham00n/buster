@@ -77,7 +77,7 @@ def start():
 	with open('/var/buster/api-keys.yaml', 'r') as api_keys:
             keys = yaml.safe_load(api_keys)
 
-	api_key=keys['apikeys']['hunter']['key']
+	api_key=str(keys['apikeys']['hunter']['key'])
 	
 	
 	if(args.output):
