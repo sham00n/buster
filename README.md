@@ -7,7 +7,7 @@ Buster is a simple OSINT tool used to:
 * Find emails from a username
 * Find the work email of a person
 
-
+![](buster-demo.gif)
 -----
 
 ## Installation
