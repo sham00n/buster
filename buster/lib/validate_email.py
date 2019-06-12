@@ -31,7 +31,7 @@ def validate_email(email,api_key):
 		
 		#get sources from a google search of the email
 		if (email_info["exists"]==True):
-			response = requests.get('https://www.google.com/search?q="' + email + '"')
+			response = requests.get('https://www.google.com/search?q=intext:' + email)
 			if response.status_code == 200:
 				soup = BeautifulSoup(response.content,features="lxml")
 				links = soup.findAll("a")
@@ -45,6 +45,7 @@ def validate_email(email,api_key):
 						email_sources.append(str(source[0].split('&')[0]))
 
 				if(len(email_sources)!=0):
+					email_sources = list(dict.fromkeys(email_sources))
 					email_info["sources"]=email_sources
 				
 		
