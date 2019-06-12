@@ -10,7 +10,7 @@ def validate_email(email,api_key):
 	response = requests.get("https://emailrep.io/" + email)
 	if response.status_code == 200:
 		data = response.json()
-		if(data["details"]["deliverable"]==True):
+		if(data["details"]["last_seen"]!="never"):
 			email_info["exists"]=True
 	
 		if(data["details"]["profiles"]!=[]):
