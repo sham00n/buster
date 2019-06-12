@@ -42,7 +42,7 @@ def validate_email(email,api_key):
 				email_sources=[]
 				for source in sources:
 					if("https://accounts.google.com/" not in source[0]):
-						email_sources.append(str(source[0].split('&')[0]).replace("%3D","=").replace("%3F","?"))
+						email_sources.append(str(source[0].split('&')[0]).replace("%3D","=").replace("%3F","?").replace("%2B","+"))
 
 				if(len(email_sources)!=0):
 					email_sources = list(dict.fromkeys(email_sources))
