@@ -72,7 +72,7 @@ def validate_email(email,api_key):
 
 		
 
-	elif response.status_code == 429:
+	else:
 		email_info["emailrep_limit_reached"]=True
 	
 
