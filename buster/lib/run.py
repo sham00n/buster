@@ -192,7 +192,7 @@ def start():
 		if(email_info["emailrep_limit_reached"]==False and email_info["exists"]==True):
 			print_info(email_info)
 		elif(email_info["emailrep_limit_reached"]==False and email_info["exists"]==False):
-			print("[=]The email address " + args.email + " doesn't exist")
+			print("[=]No Info was found on the email address " + args.email )
 
 		else:
 			print("[=]You have reached your daily limit")
