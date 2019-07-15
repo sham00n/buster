@@ -11,6 +11,8 @@ def email2breachedaccts(email,response):
 				accounts.append(breach["domain"] + " : " + breach["username"])
 			if breach["domain"] != "":
 				breaches.append(breach["domain"])
+				
+	breaches = list(dict.fromkeys(breaches))
 
 
 	return {'accounts':accounts,'breaches':breaches}
