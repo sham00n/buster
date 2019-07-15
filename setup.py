@@ -9,7 +9,7 @@ with open("README.md") as readme_file:
     readme = readme_file.read()
 
 
-requirements = ['requests','beautifulsoup4','PyYaml','lxml']
+requirements = ['requests','beautifulsoup4','PyYaml','lxml','grequests']
 
 
 setup(
@@ -20,11 +20,12 @@ setup(
         "Intended Audience :: Developers",
         "License :: OSI Approved :: BSD License",
         "Natural Language :: English",
-        "Programming Language :: Python :: 2",
+        "Programming Language :: Python :: 3",
         "Environment :: Console",
     ],
     description='Buster is an OSINT tool used to generate and verify emails and return information associated with them',
     install_requires=requirements,
+    dependency_links=['https://github.com/twintproject/twint.git@origin/master#egg=twint'],
     license="GNU GPLv3 ",
     long_description_content_type='text/markdown',
     long_description=readme + "\n\n",
