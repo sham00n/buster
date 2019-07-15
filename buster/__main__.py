@@ -1,5 +1,5 @@
 import sys
-from lib.run import start
+from .lib.run import start
 
 if __name__ == "__main__":
    
