@@ -1,11 +1,13 @@
 ## Description
 
 Buster is a simple OSINT tool used to:
-* Get info of an email (exists or not,social media where email was used,data breaches,pastes and links to where it was found)
+* Get social accounts from various sources(gravatar,about.me,myspace,skype,github,linkedin,avast)
+* Get links to where the email was found using google,twitter,darksearch and paste sites
+* Get domains registered with an email (reverse whois)
 * Generate possible emails and usernames of a person
 * Find the email of a social media account
 * Find emails from a username
-* Find the work email of a person
+* Find the work email of a person using hunter.io
 
 ![](buster-demo.gif)
 -----
@@ -23,7 +25,7 @@ Once you have a copy of the source, you can install it with:
 
 ```bash
 $ cd buster/
-$ python setup.py install
+$ python3 setup.py install
 $ buster -h
 ```
 -----
