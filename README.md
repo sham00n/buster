@@ -142,7 +142,6 @@ $ buster -f john -l doe -c company.com
 ## Thanks
 
 * [emailrep.io](https://emailrep.io/) for being developer friendly
-* [hunter.io](https://hunter.io) for being developer friendly
 * khast3x,developer of [h8mail](https://github.com/khast3x/h8mail) which was used as a reference for this README file
 * The OSINT community for being awesome!
 
