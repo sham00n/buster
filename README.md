@@ -14,6 +14,12 @@ Buster is a simple OSINT tool used to:
 
 ## Installation
 
+install twint:
+```bash
+$ git git clone https://github.com/twintproject/twint.git
+$ cd twint/
+$ python3 setup.py install
+```
 
 clone the repository:
 
@@ -24,7 +30,6 @@ $ git clone git://github.com/sham00n/buster
 Once you have a copy of the source, you can install it with:
 
 ```bash
-$ pip3 install --user --upgrade -e git+https://github.com/twintproject/twint.git@origin/master#egg=twint
 $ cd buster/
 $ python3 setup.py install
 $ buster -h
