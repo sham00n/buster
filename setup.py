@@ -38,6 +38,6 @@ setup(
     url="https://github.com/sham00n/buster",
     version="1.0.0",
     zip_safe=False,
-    data_files = [(Path("buster_data/"), ['buster/data/email-providers.json']),
-		  (Path("buster_data/"), ['api-keys.yaml'])],
+    data_files = [(Path("share/buster_data/"), ['buster/data/email-providers.json']),
+		  (Path("share/buster_data/"), ['api-keys.yaml'])],
 )
