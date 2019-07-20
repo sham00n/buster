@@ -4,6 +4,7 @@
 """The setup script."""
 
 from setuptools import setup, find_packages
+from pathlib import Path
 
 with open("README.md") as readme_file:
     readme = readme_file.read()
@@ -37,6 +38,6 @@ setup(
     url="https://github.com/sham00n/buster",
     version="1.0.0",
     zip_safe=False,
-    data_files = [('buster', ['buster/data/email-providers.json']),
-		  ('buster', ['api-keys.yaml'])],
+    data_files = [(Path("buster/"), ['buster/data/email-providers.json']),
+		  (Path("buster/"), ['api-keys.yaml'])],
 )
