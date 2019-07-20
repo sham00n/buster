@@ -9,7 +9,7 @@ with open("README.md") as readme_file:
     readme = readme_file.read()
 
 
-requirements = ['requests','beautifulsoup4','PyYaml','lxml','grequests','twint']
+requirements = ['requests','beautifulsoup4','PyYaml','lxml','grequests','pathlib','twint']
 
 
 setup(
