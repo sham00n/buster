@@ -4,7 +4,7 @@ from .gen_emails_from_info import gen_emails_from_info
 from .gen_emails_from_pattern import gen_emails_from_pattern
 from .gen_emails_from_username import gen_emails_from_username
 
-from pathlib import Path
+import pkg_resources
 import argparse
 import json
 import yaml
@@ -73,7 +73,7 @@ def start():
 	
 	
 	
-	with open( Path("/var/buster_data/") / 'api-keys.yaml', 'r') as api_keys:
+	with open( pkg_resources.resource_filename('data', 'api-keys.yaml'), 'r') as api_keys:
             keys = yaml.safe_load(api_keys)
 
 	api_key=str(keys['apikeys']['hunter']['key'])
@@ -295,7 +295,7 @@ def start():
 			
 	elif(args.username):
 		domain_list=[]		
-		with open( Path("/var/buster_data/") / 'email-providers.json','r') as json_file:
+		with open( pkg_resources.resource_filename('data', 'email-providers.json'),'r') as json_file:
 			domains = json.loads(json_file.read())
 			for domain in domains:
 				domain_list.append(domain)
