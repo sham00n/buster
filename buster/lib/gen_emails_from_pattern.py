@@ -1,4 +1,4 @@
-from pkg_resources
+import pkg_resources
 import itertools
 import json
 
