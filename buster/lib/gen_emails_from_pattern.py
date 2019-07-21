@@ -1,4 +1,4 @@
-from pathlib import Path
+from pkg_resources
 import itertools
 import json
 
@@ -102,7 +102,7 @@ def gen_emails_from_pattern(input_info,email_pattern):
 
 	#generate possible domain list from a domain pattern
 	domain_list=[]		
-	with open( Path("/var/buster_data/") / 'email-providers.json','r') as json_file:
+	with open( pkg_resources.resource_filename('data', 'email-providers.json'),'r') as json_file:
 		domains = json.loads(json_file.read())
 		for domain in domains:
 			if (matches_pattern(domain,domain_pattern)):
