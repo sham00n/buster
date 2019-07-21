@@ -40,5 +40,5 @@ setup(
     zip_safe=False,
     #data_files = [(Path("var/") / "buster_data", ['buster/data/email-providers.json']),
 		  #(Path("var/") / "buster_data", ['api-keys.yaml'])],
-    package_data={'buster': ['buster/data/email-providers.json'],'buster': ['api-keys.yaml']},
+    package_data={'data': ['email-providers.json','api-keys.yaml']}},
 )
