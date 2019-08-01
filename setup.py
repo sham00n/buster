@@ -10,7 +10,7 @@ with open("README.md") as readme_file:
     readme = readme_file.read()
 
 
-requirements = ['cython','requests','beautifulsoup4','PyYaml','lxml','gevent','grequests','twint']
+requirements = ['aiohttp_socks','requests','beautifulsoup4','PyYaml','lxml','gevent','grequests','twint']
 
 
 setup(
