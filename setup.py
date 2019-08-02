@@ -10,7 +10,7 @@ with open("README.md") as readme_file:
     readme = readme_file.read()
 
 
-requirements = ['aiohttp_socks','requests','beautifulsoup4','PyYaml','lxml','gevent','grequests','twint']
+requirements = ['cython','requests','beautifulsoup4','PyYaml','lxml','grequests','gevent','twint']
 
 
 setup(
@@ -38,5 +38,5 @@ setup(
     url="https://github.com/sham00n/buster",
     version="1.0.0",
     zip_safe=False,
-    package_data={'data': ['email-providers.json','api-keys.yaml']},
+    package_data={'data': ['email-providers.json','api-keys.yaml','domain_list.json']},
 )
