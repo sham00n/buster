@@ -21,6 +21,7 @@ def email2breachedaccts(email,response):
 				breaches.append(breach["domain"])
 				
 	breaches = list(dict.fromkeys(breaches))
+	accounts.sort(key=len,reverse=True)
 
 
 	return {'accounts':accounts,'breaches':breaches}
