@@ -13,6 +13,7 @@ from .modules.avast import email2breachedaccts
 from .modules.twitter import twitter_search
 from .modules.darksearch import dark_search
 from .modules.googledork import google_search
+#from .modules.flickr import email2flickr
 
 
 def validate_email(email):
@@ -47,12 +48,12 @@ def validate_email(email):
 			email_info["profiles"]=data["details"]["profiles"]
 			if "gravatar" in email_info["profiles"]:
 				gravatar=email2gravatar(email)
-				if gravatar != "":
-					accounts.append(gravatar)
+				if gravatar != []:
+					accounts.extend(gravatar)
 			if "aboutme" in email_info["profiles"]:
 				aboutme=email2aboutme(email)
-				if aboutme != "":
-					accounts.append(aboutme)
+				if aboutme != []:
+					accounts.extend(aboutme)
 			if "linkedin" in email_info["profiles"]:
 				accounts.append(email2linkedin(email))
 		
@@ -75,11 +76,6 @@ def validate_email(email):
 			sources.extend(darksearch_sources)
 		
 		
-		#breaches=email_breaches(email,response[4])
-		#if(breaches != []):
-			#email_info["exists"]=True
-			#email_info["breaches"]=breaches
-		
 		pastes=email_pastes(email,response[4])
 		if(pastes != []):
 			email_info["exists"]=True
@@ -100,6 +96,10 @@ def validate_email(email):
 			skype=email2skype(email)
 			if(skype != []):
 				accounts.extend(skype)
+
+			#flickr=email2flickr(email)
+			#if(flickr != ""):
+				#accounts.append(flickr)
 
 			google_sources=google_search(email)
 			if(google_sources != []):
@@ -124,5 +124,4 @@ def validate_email(email):
 	
 
 	return email_info
-
 
