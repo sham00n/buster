@@ -1,7 +1,7 @@
 ## Description
 
 Buster is an advanced OSINT tool used to:
-* Get social accounts from various sources(gravatar,about.me,myspace,skype,github,linkedin,previous breaches)
+* Get social accounts of an email using multiple sources(gravatar,about.me,myspace,skype,github,linkedin,previous breaches)
 * Get links to where the email was found using google,twitter,darksearch and paste sites
 * Get breaches of an email
 * Get domains registered with an email (reverse whois)
